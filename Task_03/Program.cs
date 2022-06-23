@@ -9,19 +9,19 @@ if (num == 1) {
 if (num == 2) {
     Console.Write("Вторник");
 }
-if (num == 3) {
+else if (num == 3) {
     Console.Write("Среда");
 }
-if (num == 4) {
+else if (num == 4) {
     Console.Write("Четверг");
 }
-if (num == 5) {
+else if (num == 5) {
     Console.Write("Пятница");
 }
-if (num == 6) {
+else if (num == 6) {
     Console.Write("Суббота");
 }
-if (num == 7) {
+else if (num == 7) {
     Console.Write("Воскресенье");
 }
 else {
