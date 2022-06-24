@@ -5,15 +5,13 @@
 //782 -> 2
 //918 -> 8
 
-Console.WriteLine("Программа выдает все четные числа от 1 до числа введенного пользователем.");
-Console.Write("Введите число больше 1 ");
+Console.WriteLine("Программа выдает последнию цифру трехзначного числа введенного пользователем.");
+Console.Write("Введите трехзначное число ");
 int num = Convert.ToInt32(Console.ReadLine());
-int count = 2;
-//while (num <= 1) {
-//    Console.Write("Введеное число меньше 1, введите число больше 1 ");
-//    num = Convert.ToInt32(Console.ReadLine());
-//}
-while (count <= num) {
-    Console.Write($"{count}, ");
-    count += 2;
-}
+int answer;
+while (num < 100 || num > 999) {
+    Console.Write("Введено не трехзначное число. Введите трехзначное число ");
+        num = Convert.ToInt32(Console.ReadLine());
+    }
+answer = num % 10;
+Console.Write($"Последняя цифра введенного вами числа {answer} ");
