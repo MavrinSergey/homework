@@ -4,7 +4,7 @@
 //a = 2 b = 10 -> max = 10
 //a = -9 b = -3 -> max = -3
 
-Console.WriteLine("Программа находит наибольшее число из двух введенных пользоватьелем.");
+Console.WriteLine("Программа сравнивает два числа введенных пользоватьелем.");
 Console.Write("Введите первое число: ");
 int num1 = Convert.ToInt32(Console.ReadLine());
 Console.Write("Введите второе число: ");
