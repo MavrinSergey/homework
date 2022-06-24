@@ -11,6 +11,6 @@ int num1 = Convert.ToInt32(Console.ReadLine());
 if (num1 % 2 == 0) {
     Console.Write($"Да число {num1} четное");
 }
-else {
+else if (num1 % 2 != 0) {
     Console.Write($"Нет число {num1} не четное");
 }
