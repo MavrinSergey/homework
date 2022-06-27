@@ -12,5 +12,4 @@ if (num1 % 7 == 0 && num1 % 23 == 0)
 {
     Console.Write($"Да");
 }
-
 else Console.Write($"Нет");
