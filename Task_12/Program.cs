@@ -17,4 +17,4 @@ bool Metod(int num1, int num2)
     return false;
 }
 bool met = Metod(num1, num2);
-string result = Metod == true ? "кратно" : "не кратно, остаток {remainder}";
+string result = Metod == true ? "кратно" : "не кратно, остаток {remainder}";//переделать
