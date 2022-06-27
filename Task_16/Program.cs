@@ -15,5 +15,4 @@ if (num1 / num2 == num2 || num2 / num1 == num1)
 {
     Console.Write("Да");
 }
-
 else Console.Write("Нет");
