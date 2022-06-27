@@ -11,10 +11,15 @@ Console.Write("Введите второе число: ");
 int num2 = Convert.ToInt32(Console.ReadLine());
 int remainder = num1 % num2;
 
-bool Metod(int num1, int num2)
+bool Metod(int x, int y)
 {
-    if (num1 % num2 == 0) return true;
+    if (x % y == 0) return true;
     return false;
 }
 bool met = Metod(num1, num2);
-string result = Metod == true ? "кратно" : "не кратно, остаток {remainder}";//переделать
+if (met == true)
+{
+    Console.WriteLine($"кратно");
+}
+else
+    Console.WriteLine($"не кратно, остаток {remainder}");
