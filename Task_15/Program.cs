@@ -19,10 +19,7 @@ if (num == 6 || num == 7)
     {
         day = "Суббота";
     }
-    else if (num == 7)
-    {
-        day = "Воскресенье";
-    }
+    else day = "Воскресенье";
     Console.Write($"{day} - {weekends}");
 }
 else
@@ -32,7 +29,7 @@ else
     {
         day = "Понедельник";
     }
-    if (num == 2)
+    else if (num == 2)
     {
         day = "Вторник";
     }
@@ -44,10 +41,7 @@ else
     {
         day = "Четверг";
     }
-    else if (num == 5)
-    {
-        day = "Пятница";
-    }
+    else day = "Пятница";
     Console.Write($"{day} - {workingDay}");
 }
 
