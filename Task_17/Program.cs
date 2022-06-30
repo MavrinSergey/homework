@@ -1,30 +1,15 @@
 ﻿//Напишите программу которая принимает на вход координаты точки(x и y), причем x!=0 y!=0
 //и выдает номер четверти плоскости в которой находится эта точка
 
-Console.WriteLine("Введите координаты точки(X и Y)");
-Console.Write("x: ");
-int x = Convert.ToInt32(Console.ReadLine());
-Console.Write("y: ");
-int y = Convert.ToInt32(Console.ReadLine());
+//Console.WriteLine("Введите координаты точки(X и Y)");
+//Console.Write("x: ");
+//int x = Convert.ToInt32(Console.ReadLine());
+//Console.Write("y: ");
+//int y = Convert.ToInt32(Console.ReadLine());
 
-//if (x > 0 && y > 0) Console.WriteLine("Первая четверть");
-//else if (x < 0 && y > 0) Console.WriteLine("Вторая четверть");
-//else if (x < 0 && y < 0) Console.WriteLine("Третья четверть");
-//else if (x > 0 && y < 0) Console.WriteLine("Четвертая четверть");
-//else Console.WriteLine("Введены некоректные координаты");
-////вариант с функцией
-//string Quarter(int x, int y)
-//{
-//    string result = "";
-//    if (x > 0 && y > 0) result = "Первая четверть";
-//    else if (x < 0 && y > 0) result = "Вторая четверть";
-//    else if (x < 0 && y < 0) result = "Третья четверть";
-//    else if (x > 0 && y < 0) result = "Четвертая четверть";
-//    else result = "Введены некоректные координаты";
-//    return result;
-//}
-//
-//// второй вариант с функцией(упрощенная)
+Console.Write("Введите координаты точки(X и Y) через пробел ");
+int[] xy = Console.ReadLine().Split().Select(int.Parse).ToArray();//Ввод данных через пробел
+
 string Quarter(int xc, int yc)
 {
     if (xc > 0 && yc > 0) return "Первая четверть";
@@ -34,5 +19,5 @@ string Quarter(int xc, int yc)
     else return "Введены некоректные координаты";
 }
 
-string result = Quarter(x, y);
+string result = Quarter(xy[0], xy[1]);
 Console.WriteLine(result);
