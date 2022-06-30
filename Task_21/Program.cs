@@ -16,15 +16,17 @@ int xB = Convert.ToInt32(Console.ReadLine());
 Console.Write("y: ");
 int yB = Convert.ToInt32(Console.ReadLine());
 
-double Distance (int pAx, int pAy, int pBx, int pBy)
+double Distance(int pAx, int pAy, int pBx, int pBy)
 {
     int cat1 = 0;
     int cat2 = 0;
     double hypotenuse = 0;
-    cat1 = Math.Abs(pAx) - Math.Abs(pBx);
-    cat2 = Math.Abs(pAy) - Math.Abs(pBy);
+    cat1 = Math.Max(pAx, pBx) - Math.Min(pAx, pBx);
+    cat2 = Math.Max(pAy, pBy) - Math.Min(pAy, pBy);
     hypotenuse = Math.Sqrt(cat1 * cat1 + cat2 * cat2);
-    return Math.Round(hypotenuse,2);
+    Console.WriteLine(cat1);
+    Console.WriteLine(cat2);
+    return Math.Round(hypotenuse, 2);
 }
 double result = Distance(xA, yA, xB, yB);
 Console.WriteLine($"Растояние между точками А и В: {result}");
