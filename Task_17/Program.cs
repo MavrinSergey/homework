@@ -1,14 +1,14 @@
 ﻿//Напишите программу которая принимает на вход координаты точки(x и y), причем x!=0 y!=0
 //и выдает номер четверти плоскости в которой находится эта точка
 
-//Console.WriteLine("Введите координаты точки(X и Y)");
-//Console.Write("x: ");
-//int x = Convert.ToInt32(Console.ReadLine());
-//Console.Write("y: ");
-//int y = Convert.ToInt32(Console.ReadLine());
+Console.WriteLine("Введите координаты точки(X и Y)");
+Console.Write("x: ");
+int x = Convert.ToInt32(Console.ReadLine());
+Console.Write("y: ");
+int y = Convert.ToInt32(Console.ReadLine());
 
 Console.Write("Введите координаты точки(X и Y) через пробел ");
-int[] xy = Console.ReadLine().Split().Select(int.Parse).ToArray();//Ввод данных через пробел
+//int[] xy = Console.ReadLine().Split().Select(int.Parse).ToArray();//Ввод данных через пробел
 
 string Quarter(int xc, int yc)
 {
