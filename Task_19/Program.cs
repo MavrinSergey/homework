@@ -3,3 +3,10 @@
 //14212 -> нет
 //12821 -> да
 //23432 -> да
+
+Console.WriteLine("Введите пятизначное число ");
+int num = Convert.ToInt32(Console.ReadLine());
+while (num < 10000 || num > 9999) {
+    Console.Write("Введено не пятизначное число. Попробуйте еще раз ");
+        num = Convert.ToInt32(Console.ReadLine());
+    }
