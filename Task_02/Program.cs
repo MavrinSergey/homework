@@ -17,6 +17,4 @@ if (num1 > num2) {
 else if (num1 < num2) {
     Console.WriteLine($"Число {num1} меньше числа {num2}");
 }
-else if (num1 == num2) {
-    Console.WriteLine($"Число {num1} равно числу {num2}");
-}
+else Console.WriteLine($"Число {num1} равно числу {num2}");
