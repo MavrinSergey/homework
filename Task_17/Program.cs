@@ -19,5 +19,5 @@ string Quarter(int xc, int yc)
     else return "Введены некоректные координаты";
 }
 
-string result = Quarter(xy[0], xy[1]);
+string result = Quarter(x, x);
 Console.WriteLine(result);
