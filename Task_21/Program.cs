@@ -8,23 +8,27 @@ Console.Write("x: ");
 int xA = Convert.ToInt32(Console.ReadLine());
 Console.Write("y: ");
 int yA = Convert.ToInt32(Console.ReadLine());
+Console.Write("z: ");
+int zA = Convert.ToInt32(Console.ReadLine());
 Console.WriteLine("Введите координаты точки B ");
 Console.Write("x: ");
 int xB = Convert.ToInt32(Console.ReadLine());
 Console.Write("y: ");
 int yB = Convert.ToInt32(Console.ReadLine());
+Console.Write("z: ");
+int zB = Convert.ToInt32(Console.ReadLine());
 
-double Distance(int pAx, int pAy, int pBx, int pBy)
+double Distance(int pAx, int pAy, int pAz, int pBx, int pBy, int pBz)
 {
-    int cat1 = 0;
-    int cat2 = 0;
+    double cat1 = 0;
+    double cat2 = 0;
+    double cat3 = 0;
     double hypotenuse = 0;
-    cat1 = Math.Max(pAx, pBx) - Math.Min(pAx, pBx);
-    cat2 = Math.Max(pAy, pBy) - Math.Min(pAy, pBy);
-    hypotenuse = Math.Sqrt(cat1 * cat1 + cat2 * cat2);
-    Console.WriteLine(cat1);
-    Console.WriteLine(cat2);
+    cat1 = Math.Pow(pAx - pBx,2);
+    cat2 = Math.Pow(pAy - pBy,2);
+    cat3 = Math.Pow(pAz - pBz,2);
+    hypotenuse = Math.Sqrt(cat1 + cat2 + cat3);
     return Math.Round(hypotenuse, 2);
 }
-double result = Distance(xA, yA, xB, yB);
+double result = Distance(xA, yA, zA, xB, yB, zB);
 Console.WriteLine($"Растояние между точками А и В: {result}");
