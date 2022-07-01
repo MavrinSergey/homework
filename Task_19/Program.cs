@@ -14,7 +14,7 @@ bool Palindrome(int n)
         Console.Write("Введено не пятизначное число. Попробуйте еще раз ");
         n = Convert.ToInt32(Console.ReadLine());
     }
-    if (n / 10000 == n % 10 || n / 1000 == num % 100)
+    if (n / 10000 == n % 10 && n / 1000 == num % 100)
     {
         return true;
     }
