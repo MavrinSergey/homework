@@ -5,16 +5,24 @@
 //5 -> 120
 
 Console.Write("Введите число: ");
-int a = Convert.ToInt32(Console.ReadLine());
-
-int Sum(int num)
+int n = Convert.ToInt32(Console.ReadLine());
+int res = 1;
+int start = 1;
+while (start <= n)
 {
-    int sum = 1;
-    for (int i = 1; i <= a; i++)
+    try
     {
-        sum = sum * i;
+        checked
+        {
+            res = res * start;
+            start++;
+        }
     }
-   return sum;
+    catch (System.Exception)
+    {
+
+        System.Console.WriteLine("Переполнение типа!");
+        break;
+    }
 }
-int res = Sum(a);
-System.Console.WriteLine(res);
+Console.WriteLine($"Произведение чисел от 1 до {start-1} равно {res}");

@@ -5,14 +5,21 @@
 
 Console.WriteLine("Программа возводит число в степень.");
 Console.Write("Введите число которое будем возводить в степень: ");
-int num = Convert.ToInt32(Console.ReadLine());
+int A = Convert.ToInt32(Console.ReadLine());
 Console.Write("Введите степнь числа в которую будем возводить: ");
-int count = Convert.ToInt32(Console.ReadLine());
-int answer = num;
+int B = Convert.ToInt32(Console.ReadLine());
 
-for (int i = 2; i < count; i++)
+int Exponentiation(int num, int degree)
 {
-    answer  = answer * num;
+    int result = num;
+
+    for (int i = 1; i < degree; i++)
+    {
+        result = result * num;
+    }
+    return result;
+
 }
 
-Console.Write(num);
+int multiplication = Exponentiation(A, B);
+Console.Write(multiplication);
