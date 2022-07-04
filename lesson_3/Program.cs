@@ -1,8 +1,8 @@
 ﻿// Вид 1
-void Method1()//ни чего не возвращают ни чего не принимают
-{
-    Console.WriteLine("Fdnjh..");
-}
+//void Method1()//ни чего не возвращают ни чего не принимают
+//{
+//    Console.WriteLine("Fdnjh..");
+//}
 //Method1();
 
 
@@ -16,21 +16,21 @@ void Method1()//ни чего не возвращают ни чего не пр�
 
 
 //Вид 2
-void Method2(string msg)//ни чего не возвращают но могут принимать какие то данные
-{
-    Console.WriteLine(msg);
-}
-//Method2("Текст сообщения");
-
-void Method21(string msg, int count)//ни чего не возвращают но могут принимать какие то данные
-{
-    int i = 0;
-    while (i < count)
-    {
-        Console.WriteLine(msg);
-        i++;
-    }
-}
+//void Method2(string msg)//ни чего не возвращают но могут принимать какие то данные
+//{
+//    Console.WriteLine(msg);
+//}
+////Method2("Текст сообщения");
+//
+//void Method21(string msg, int count)//ни чего не возвращают но могут принимать какие то данные
+//{
+//    int i = 0;
+//    while (i < count)
+//    {
+//        Console.WriteLine(msg);
+//        i++;
+//    }
+//}
 //Method21(msg:"Текст сообщения", count: 4);
 
 
@@ -60,15 +60,15 @@ int year = Method3();
 
 
 // Вид 4 Что то принимают и что то возвращают
-string Method4(int count, string text)
-{
-    string result = String.Empty;
-    for (int i = 0; i < count; i++)
-    {
-        result = result + text;
-    }
-    return result;
-}
+//string Method4(int count, string text)
+//{
+//    string result = String.Empty;
+//    for (int i = 0; i < count; i++)
+//    {
+//        result = result + text;
+//    }
+//    return result;
+//}
 //string res = Method4(10, "ghfghf");
 //Console.WriteLine(res);
 
