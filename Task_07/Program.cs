@@ -8,9 +8,10 @@
 Console.WriteLine("Программа выдает последнию цифру трехзначного числа введенного пользователем.");
 Console.Write("Введите трехзначное число ");
 int num = Convert.ToInt32(Console.ReadLine());
-while (num < 100 || num > 999) {
+while (num < 100 || num > 999)
+{
     Console.Write("Введено не трехзначное число. Введите трехзначное число ");
-        num = Convert.ToInt32(Console.ReadLine());
-    }
+    num = Convert.ToInt32(Console.ReadLine());
+}
 num %= 10;
 Console.Write($"Последняя цифра введенного вами числа {num} ");
