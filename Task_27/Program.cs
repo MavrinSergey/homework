@@ -7,13 +7,11 @@ Console.Write("Введите число: ");
 int a = Convert.ToInt32(Console.ReadLine());
 int DigitsCount(int num)
 {
-    int count = 0;
     int sum = 0;
     while (num > 0)
     {
         sum = sum + num % 10;
         num /= 10;
-        count++;
     }
     return sum;
 }
