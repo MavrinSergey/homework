@@ -21,9 +21,9 @@ double Distance(int pAx, int pAy, int pBx, int pBy)
     double cat1 = 0;
     double cat2 = 0;
     double hypotenuse = 0;
-    cat1 = Math.Pow(pAx - pBx,2);
+    cat1 = Math.Pow(pAx - pBx,2);// катет возводим в степень
     cat2 = Math.Pow(pAy - pBy,2);
-    hypotenuse = Math.Sqrt(cat1 + cat2);
+    hypotenuse = Math.Sqrt(cat1 + cat2);// квадрат из суммы квадратов катета
     return Math.Round(hypotenuse, 2); //округляем 
 }
 double result = Distance(xA, yA, xB, yB);
