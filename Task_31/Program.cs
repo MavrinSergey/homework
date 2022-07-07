@@ -5,7 +5,7 @@
 //положительных чисел равна 29, сумма отрицательных равна
 //-20.
 
-int[] CreatndInt(int size, int begin, int end)
+int[] CreatArray(int size, int begin, int end)
 {
     int[] array = new int[size];
     Random rnd = new Random();
@@ -48,7 +48,7 @@ void PrintArray(int[] array)
     }
 }
 
-int[] resArray = CreateArrayRndInt(12, -9, 9);
+int[] resArray = CreatArray(12, -9, 9);
 PrintArray(resArray);
 int[] sumNegPosElem = GetSumNegPosElem(resArray);
 System.Console.WriteLine();

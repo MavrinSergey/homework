@@ -28,18 +28,18 @@
 Console.WriteLine("Эта программа которая принимает на вход число и проверяет, является ли оно палиндромом.");
 Console.Write("Введите число ");
 
-ulong number = Convert.ToInt32(Console.ReadLine());
-ulong temp = number;
-ulong rev = 0;
+double number = Convert.ToDouble(Console.ReadLine());
+double temp = number;
+double rev = 0;
 while (number > 0)
     {
-    ulong digital = number % 10;
+    double digital = number % 10;
     rev = rev * 10 + digital;
     number = number / 10;
-    Console.WriteLine(digital);
-    Console.WriteLine(rev);
-    Console.WriteLine(number);
-    Console.WriteLine(temp);
+    //Console.WriteLine(digital);
+    //Console.WriteLine(rev);
+    //Console.WriteLine(number);
+    //Console.WriteLine(temp);
     }
 
 if(temp == rev)

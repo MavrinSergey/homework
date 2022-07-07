@@ -36,6 +36,7 @@ int CountEvenNum(int[] array) //считает кол-во четных чисе
     return count;
 }
 
+//начало программы
 Console.WriteLine("Программа показывает количество чётных чисел в массиве");
 Console.Write("Задайте длинну массива: ");
 int size = Convert.ToInt32(Console.ReadLine());
