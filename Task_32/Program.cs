@@ -43,7 +43,6 @@ int[] General(int size, int begin, int end)
 
 int[] Swap(int[] array)
 {
-    int[] array = new int[array.Length];
     for (int i = 0; i < array.Length; i++)
 {
     array[i] = array[i] * -1;
