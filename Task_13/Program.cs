@@ -3,9 +3,6 @@
 //78 -> третьей цифры нет
 //32679 -> 6
 
-Console.WriteLine("Программа выдает третью цифру числа введенного пользователем, или пишет что ее нет.");
-int number = Convert.ToInt32(Console.ReadLine());
-
 int Third(int num)
 {
     while (num >= 1000)
@@ -16,5 +13,7 @@ int Third(int num)
     return num;
 }
 
+Console.WriteLine("Программа выдает третью цифру числа введенного пользователем, или пишет что ее нет.");
+int number = Convert.ToInt32(Console.ReadLine());
 if (number < 100) Console.Write("Третьей цифры нет");
 else Console.Write($"{Third(number)}");

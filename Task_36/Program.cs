@@ -27,10 +27,9 @@ void PrintArray(int[] array) //печатает массив
 int SumOddElement(int[] array)
 {
     int sum = 0;
-    for (int i = 1; i < array.Length; i++)
+    for (int i = 1; i < array.Length; i+=2)
     {
         sum = sum + array[i];
-        i ++;
     }
     return sum;
 }

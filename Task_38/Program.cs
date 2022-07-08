@@ -2,31 +2,31 @@
 //Найдите разницу между максимальным и минимальным элементов массива.
 //[3 7 22 2 78] -> 76
 
-int[] CreatArray(int size, int begin, int end)
+double[] CreatArray(int size)
 {
-    int[] array = new int[size];
+    double[] array = new double[size];
     Random rnd = new Random();
     for (int i = 0; i < array.Length; i++)
     {
-        array[i] = rnd.Next(begin, end + 1);
+        array[i] = rnd.NextDouble() * 10;
     }
     return array;
 }
 
-void PrintArray(int[] array) //печатает массив
+void PrintArray(double[] array) //печатает массив
 {
     for (int i = 0; i < array.Length; i++)
     {
         if (i == 0) System.Console.Write("[");
-        if (i < array.Length - 1) Console.Write(array[i] + ",");
-        else System.Console.Write(array[i] + "]");
+        if (i < array.Length - 1) Console.Write(Math.Round(array[i], 2) + "; ");
+        else System.Console.Write(Math.Round(array[i], 2) + "]");
     }
 }
 
-int MaxNum(int[] array)//ищет максимум
+double MaxNum(double[] array)//ищет максимум
 {
-    int max = array[0];
-    for (int i = 1; i < array.Length-1; i++)
+    double max = array[0];
+    for (int i = 1; i < array.Length - 1; i++)
     {
         if (max < array[i])
         {
@@ -36,10 +36,10 @@ int MaxNum(int[] array)//ищет максимум
     return max;
 }
 
-int MinNum(int[] array)//ищет минимум
+double MinNum(double[] array)//ищет минимум
 {
-    int min = array[0];
-    for (int i = 1; i < array.Length-1; i++)
+    double min = array[0];
+    for (int i = 1; i < array.Length - 1; i++)
     {
         if (min > array[i])
         {
@@ -49,19 +49,18 @@ int MinNum(int[] array)//ищет минимум
     return min;
 }
 
-
 //начало программы
 Console.WriteLine("Программа считает разницу максимального и минимального элементов в массиве.");
 Console.Write("Задайте длинну массива: ");
 int size = Convert.ToInt32(Console.ReadLine());
-Console.WriteLine("Задайте нужный диапазон чисел.");
-Console.Write("Нижняя граница диапазона: ");
-int begin = Convert.ToInt32(Console.ReadLine());
-Console.Write("Верхняя граница диапазона: ");
-int end = Convert.ToInt32(Console.ReadLine());
+//Console.WriteLine("Задайте нужный диапазон чисел.");
+//Console.Write("Нижняя граница диапазона: ");
+//double begin = Convert.ToDouble(Console.ReadLine());
+//Console.Write("Верхняя граница диапазона: ");
+//double end = Convert.ToDouble(Console.ReadLine());
 
-int[] MyArray = CreatArray(size, begin, end);//создали массив
+double[] MyArray = CreatArray(size);//создали массив
 PrintArray(MyArray);//печатаем наш массив
-int max = MaxNum(MyArray);// максимум
-int min = MinNum(MyArray);// минимум
-System.Console.WriteLine(max-min);// разница
+double max = MaxNum(MyArray);// максимум
+double min = MinNum(MyArray);// минимум
+System.Console.WriteLine(Math.Round(max - min, 2));// разница
