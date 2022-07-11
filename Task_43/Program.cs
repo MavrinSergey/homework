@@ -20,4 +20,3 @@ x = (b2 - b1) / (k1-k2);
 y = k2 * x + b2;
 System.Console.WriteLine(x);
 System.Console.WriteLine(y);
-
