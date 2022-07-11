@@ -32,6 +32,7 @@ int[] CopyOfArray(int[] array)
     }
     return copy;
 }
+
 int[] MyArray = CreatArray(5);
 PrintArray(MyArray);
 System.Console.WriteLine();

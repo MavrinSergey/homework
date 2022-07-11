@@ -32,3 +32,4 @@ double Distance(int pAx, int pAy, int pAz, int pBx, int pBy, int pBz)
 }
 double result = Distance(xA, yA, zA, xB, yB, zB);
 Console.WriteLine($"Растояние между точками А и В: {result}");
+
