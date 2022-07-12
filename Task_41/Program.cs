@@ -19,9 +19,8 @@ int PositiveNumberCounter(int[] myArray)
     for (int i = 0; i < myArray.Length; i++)
     {
         if (myArray[i] > 0) {count += 1;}
-        else 
-        return count;
     }
+    return count;
 }
 
 System.Console.WriteLine("Программа считает сколько чисел больше 0 ввел пользователь");
