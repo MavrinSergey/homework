@@ -38,3 +38,6 @@ for (int i = 0; i < myArray.Length; i++)
 PrintArray(myArray);
 count = PositiveNumberCounter(myArray);
 System.Console.WriteLine(count);
+
+//ввод в одну строку
+string[] iput = System.Console.ReadLine().Split().ToArray();

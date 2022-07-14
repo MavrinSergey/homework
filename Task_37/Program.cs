@@ -18,6 +18,7 @@ int[] MularrEl (int[] array)
     
     return ResArr;
 }
+
 void PrintArray(int[] array)
 {
     for (int i = 0; i < array.Length; i++)
@@ -38,8 +39,9 @@ int[] Creat(int size)
     }
     return array;
 }
+
+
 int[] generr = Creat(10);
 int[] resArr =  MularrEl(generr);
-
 PrintArray(generr);
 PrintArray(resArr);

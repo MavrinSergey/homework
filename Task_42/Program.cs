@@ -29,41 +29,53 @@
 //}
 //ToBin(a);
 
-int a;
-int[] result;
-string answer;
+// int a;
+// int[] result;
+// string answer;
 
 
-Console.Write       ( "Enter decimal number: ");
-a                   = Convert.ToInt32(Console.ReadLine());
-result              = ConvertToBool(a);
-answer              = MakeViewStringMassive(result);
-Console.WriteLine   ( answer );
+// Console.Write       ( "Enter decimal number: ");
+// a                   = Convert.ToInt32(Console.ReadLine());
+// result              = ConvertToBool(a);
+// answer              = MakeViewStringMassive(result);
+// Console.WriteLine   ( answer );
 
-int[] ConvertToBool(int a){
-    int b = a % 512;
-    int[] boolean = new int[9];
-    int razr = 256;
-    for(int i = 0; i < boolean.Length; i++){
-        if(b >= razr){
-            b = b - razr;
-            boolean[i] = 1;
-        }
-        else{
-            boolean[i] = 0;
-        }
-        razr /= 2;
-    }
-    return boolean;
+// int[] ConvertToBool(int a){
+//     int b = a % 512;
+//     int[] boolean = new int[9];
+//     int razr = 256;
+//     for(int i = 0; i < boolean.Length; i++){
+//         if(b >= razr){
+//             b = b - razr;
+//             boolean[i] = 1;
+//         }
+//         else{
+//             boolean[i] = 0;
+//         }
+//         razr /= 2;
+//     }
+//     return boolean;
+// }
+
+// string MakeViewStringMassive(int[] massive){
+//     string viewString = "[";
+//     int j = 1;
+//     for(int i = 0; i < massive.Length; i++, j++){
+//         viewString += Convert.ToString(massive[i]);
+//         if(j != massive.Length) viewString += ", ";
+//     }
+//     viewString += "]";
+//     return viewString;
+// }
+
+
+
+
+int a = 13;
+void ToBin(int n)
+{
+    if (n == 0) return;
+    ToBin(n / 2);
+    Console.Write(n % 2);
 }
-
-string MakeViewStringMassive(int[] massive){
-    string viewString = "[";
-    int j = 1;
-    for(int i = 0; i < massive.Length; i++, j++){
-        viewString += Convert.ToString(massive[i]);
-        if(j != massive.Length) viewString += ", ";
-    }
-    viewString += "]";
-    return viewString;
-}
+ToBin(a);
