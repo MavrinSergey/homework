@@ -1,13 +1,24 @@
-﻿Console.Clear();
-Random r = new Random();
-
-Console.CursorVisible = false;
-while (true)
+﻿int[] nums = { 54, 7, -41, 2, 4, 2, 89, 33, -5, 12 };
+ 
+// сортировка
+int temp = nums[0];
+for (int k = 0; k < nums.Length - 1; k++)
 {
-    Console.SetCursorPosition(
-        left: r.Next(Console.WindowWidth),
-        top: r.Next(Console.WindowHeight)
-        );
-        System.Console.Write(r.Next(10));
-        Thread.Sleep(1000);
+    for (int l = k + 1; l < nums.Length; l++)
+    {
+        if (nums[k] > nums[l])
+        {
+            temp = nums[k];
+            nums[k] = nums[l];
+            nums[l] = temp;
+        }
+    }
+}
+
+ 
+// вывод
+Console.WriteLine("Вывод отсортированного массива");
+for (int k = 0; k < nums.Length; k++)
+{
+    Console.Write($"{nums[k]} ");
 }
