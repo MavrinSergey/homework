@@ -43,6 +43,20 @@ int[,] CreateMatrix(int row, int cok, int min, int max)
     return array;
 }
 
+int[,] CreateMatrix(int row, int col)
+{
+    int[,] array = new int[row, col];
+    Random rnd = new Random();
+    for (int i = 0; i < array.GetLength(0); i++)
+    {
+        for (int j = 0; j < array.GetLength(1); j++)
+        {
+            array[i, j] = rnd.Next(1, 10);
+        }
+    }
+    return array;
+}
+
 void PrintMatrix(int[,] matrix)
 {
     for (int i = 0; i < matrix.GetLength(0); i++)
