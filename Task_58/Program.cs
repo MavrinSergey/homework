@@ -17,6 +17,21 @@ int[,] CreateMatrix()
     int[,] array = new int[row, col];
     return array;
 }
+int[,] CreateMatrixB(int[,] matrix)
+{
+    Console.Write("Введите кол-во строк: ");
+    int row = Convert.ToInt32(Console.ReadLine());
+    while (row != matrix.GetLength(1))
+    {
+        Console.WriteLine("Кол-во строк во второй матрице должно быть равно кол-ву столбцов в первой матрице.");
+        Console.Write("Введите кол-во строк еще раз: ");
+        row = Convert.ToInt32(Console.ReadLine());
+    }
+    Console.Write("Введите кол-во столбцов: ");
+    int col = Convert.ToInt32(Console.ReadLine());
+    int[,] array = new int[row, col];
+    return array;
+}
 
 void FillingMatrix(int[,] matrix)
 {
@@ -64,13 +79,14 @@ int[,] MultiplicationMatrix(int[,] matrixA, int[,] matrixB)
     return matrixC;
 }
 
+
 Console.WriteLine("Программа перемножает две матрицы.");
 Console.WriteLine("Введите параметры первой матрицы.");
 int[,] myMatrixA = CreateMatrix();
 FillingMatrix(myMatrixA);
 
 Console.WriteLine("Введите параметры второй матрицы.");
-int[,] myMatrixB = CreateMatrix();
+int[,] myMatrixB = CreateMatrixB(myMatrixA);
 FillingMatrix(myMatrixB);
 
 int[,] myMatrixC = MultiplicationMatrix(myMatrixA, myMatrixB);

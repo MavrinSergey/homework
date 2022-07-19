@@ -70,3 +70,25 @@ void PrintMatrix(int[,] matrix)
         Console.WriteLine();
     }
 }
+
+int[,] CreateMatrix()
+{
+    Console.Write("Введите кол-во строк: ");
+    int row = Convert.ToInt32(Console.ReadLine());
+    Console.Write("Введите кол-во столбцов: ");
+    int col = Convert.ToInt32(Console.ReadLine());
+    int[,] array = new int[row, col];
+    return array;
+}
+
+void FillingMatrix(int[,] matrix)
+{
+    for (int i = 0; i < matrix.GetLength(0); i++)
+    {
+        for (int j = 0; j < matrix.GetLength(1); j++)
+        {
+            Console.Write($"Введите значение {i + 1}-строки {j + 1}-столбца: ");
+            matrix[i, j] = Convert.ToInt32(Console.ReadLine());
+        }
+    }
+}
