@@ -17,7 +17,7 @@ int[,] CreateMatrix()
     int[,] array = new int[row, col];
     return array;
 }
-int[,] CreateMatrixB(int[,] matrix)
+int[,] CreateMatrixB(int[,] matrix) // не придумал как по другому проверку провести
 {
     Console.Write("Введите кол-во строк: ");
     int row = Convert.ToInt32(Console.ReadLine());
