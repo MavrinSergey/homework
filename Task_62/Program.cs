@@ -4,10 +4,31 @@
 // 12 13 14 05
 // 11 16 15 06
 // 10 09 08 07
-Console.Clear();
-int[] CreateArray(int size)
+
+int[,] CreateMatrix(int size)
 {
-    int[] array = new int[size];
+    int[,] array = new int[size, size];
+    return array;
+}
+
+int[,] SpiralFilledMatrix(int[,] array)
+{
+    int temp = 1;
+    int i = 0;
+    int j = 0;
+    while (temp <= array.GetLength(0) * array.GetLength(1))
+    {
+        array[i, j] = temp;
+        temp++;
+        if (i <= j + 1 && i + j < array.GetLength(1) - 1)
+            j++;
+        else if (i < j && i + j >= array.GetLength(0) - 1)
+            i++;
+        else if (i >= j && i + j > array.GetLength(1) - 1)
+            j--;
+        else
+            i--;
+    }
     return array;
 }
 
@@ -33,66 +54,8 @@ void PrintMatrix(int[,] matrix)
     }
 }
 
-int[,] SpiralFilledMatrix(int[] array)
-{
-    int[,] matrix = new int[array.Length, array.Length];
-    {
-        int count = 1;
-        int rowRight = matrix.GetLength(0);
-        int colRight = matrix.GetLength(1);
-
-        int rowDown = matrix.GetLength(0);
-        int colDown = matrix.GetLength(1);
-
-        int rowLeft = matrix.GetLength(0);
-        int colLeft = matrix.GetLength(1)-array.Length;
-
-        int rowUp = matrix.GetLength(0)-array.Length;
-        int colUp = matrix.GetLength(1)-array.Length;
-        int i = 0, j = 0, k = 0;
-        for (; k < array.Length*array.Length;)
-        {
-            for (; j < colRight; j++)
-            {
-                matrix[i, j] = count++;
-                k++;
-            }
-            i++;
-            colRight--;
-            for (; i < rowDown; i++)
-            {
-                matrix[i, colDown - 1] = count++;
-                k++;
-            }
-            colDown--;
-            rowDown--;
-            j--;
-            j--;
-            for (; j >= colLeft; j--)
-            {
-                matrix[rowLeft - 1, j] = count++;
-                k++;
-            }
-            colLeft++;
-            rowLeft--;
-            i--;
-            i--;
-            j++;
-            for (;i > rowUp; i--)
-            {
-                matrix[i, colUp] = count++;
-                k++;
-            }
-            rowUp++;
-            colUp++;
-            j++;
-            i++;
-        }
-    }
-    return matrix;
-}
-
+Console.Clear();
 Console.WriteLine("Программа заполняет двухмерный массив по спирали.");
-int[] myArray = CreateArray(9);
-int[,] mySpiralMatrix = SpiralFilledMatrix(myArray);
+int[,] myMatrix = CreateMatrix(4);
+int[,] mySpiralMatrix = SpiralFilledMatrix(myMatrix);
 PrintMatrix(mySpiralMatrix);
