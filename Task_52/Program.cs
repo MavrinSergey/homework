@@ -1,5 +1,4 @@
 ﻿// Задача 52. Задайте двумерный массив из целых чисел. Найдите среднее арифметическое элементов в каждом столбце.
-
 // Например, задан массив:
 // 1 4 7 2
 // 5 9 2 3
@@ -51,7 +50,7 @@ double[] AverageCol(int[,] array)
     return averageColArr;
 }
 
-void PrintArray(double[] array) //печатает массив
+void PrintArray(double[] array)
 {
     for (int i = 0; i < array.Length; i++)
     {

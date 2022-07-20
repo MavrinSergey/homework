@@ -4,7 +4,7 @@
 // 1 4 7 2
 // 5 9 2 3
 // 8 4 2 4
-// 17 -> такого числа в массиве нет
+// 1,7 -> такого числа в массиве нет
 
 Console.Clear();
 int[,] CreateMatrixRndInt(int row, int col, int min, int max)
