@@ -40,4 +40,4 @@ count = PositiveNumberCounter(myArray);
 System.Console.WriteLine(count);
 
 //ввод в одну строку
-string[] iput = System.Console.ReadLine().Split().ToArray();
+//string[] iput = Console.ReadLine().Split().ToArray();

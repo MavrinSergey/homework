@@ -13,27 +13,18 @@
 // 3 4 7
 
 Console.Clear();
-
-int[,] CreateMatrix()
+int[,] CreateMatrix(int row, int col)
 {
-    Console.Write("Введите кол-во строк: ");
-    int row = Convert.ToInt32(Console.ReadLine());
-    Console.Write("Введите кол-во столбцов: ");
-    int col = Convert.ToInt32(Console.ReadLine());
     int[,] array = new int[row, col];
-    return array;
-}
-
-void FillingMatrix(int[,] matrix)
-{
-    for (int i = 0; i < matrix.GetLength(0); i++)
+    Random rnd = new Random();
+    for (int i = 0; i < array.GetLength(0); i++)
     {
-        for (int j = 0; j < matrix.GetLength(1); j++)
+        for (int j = 0; j < array.GetLength(1); j++)
         {
-            Console.Write($"Введите значение {i + 1}-строки {j + 1}-столбца: ");
-            matrix[i, j] = Convert.ToInt32(Console.ReadLine());
+            array[i, j] = rnd.Next(1, 10);
         }
     }
+    return array;
 }
 
 void PrintMatrix(int[,] matrix)
@@ -50,18 +41,54 @@ void PrintMatrix(int[,] matrix)
     }
 }
 
-int[,] DelRowColMinElem(int[,] matrix)
+int[] SearchMinElem(int[,] matrix)
 {
-    
+    int[] array = new int[2];
+    int min = 11;
+    int row = matrix.GetLength(0)-1;
+    int col = matrix.GetLength(1)-1;
+    for (int i = 0; i <= row; i++)
+    {
+        for (int j = 0; j <= col; j++)
+        {
+            if (min > matrix[i, j])
+            {
+                min = matrix[i, j];
+                array[0]=i;
+                array[1]=j;
+            }
+        }
+    }
+    return array;
 }
 
+int[,] ModificMatrix(int[,] matrix, int x, int y)
+{
+    int[,] massiv = new int[matrix.GetLength(0) - 1, matrix.GetLength(1) - 1];
+    for (int i = 0; i < massiv.GetLength(0); i++)
+    {
+        for (int j = 0; j < massiv.GetLength(1); j++)
+        {
+            if (i < x && j < y)
+                massiv[i, j] = matrix[i, j];
+            else if (i < x && j >= y)
+                massiv[i, j] = matrix[i, j + 1];
+            else if (i >= x && j < y)
+                massiv[i, j] = matrix[i + 1, j];
+            else if (i >= x && j >= y)
+                massiv[i, j] = matrix[i + 1, j + 1];
+        }
+    }
+    return massiv;
+}
 
 Console.WriteLine("Программа удалит строку и столбец на пересечении которых стоит наименьший элемент.");
 Console.WriteLine("Введите параметр матрицы.");
-int[,] myMatrix = CreateMatrix();
-FillingMatrix(myMatrix);
-
-int[,] resultMatrix = DelRowColMinElem(myMatrix);
+int[,] myMatrix = CreateMatrix(4, 4);
 PrintMatrix(myMatrix);
 System.Console.WriteLine();
-PrintMatrix(resultMatrix);
+int[] myNumRowCol = SearchMinElem(myMatrix);
+int[,] myModificMatrix = ModificMatrix(myMatrix, myNumRowCol[0], myNumRowCol[1]);
+Console.WriteLine(myNumRowCol[0]);
+Console.WriteLine(myNumRowCol[1]);
+PrintMatrix(myModificMatrix);
