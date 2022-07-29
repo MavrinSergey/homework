@@ -13,9 +13,6 @@ System.Console.WriteLine(sum);
 int sum2 = NaturalNamberVar2(n);
 System.Console.WriteLine(sum2);
 
-int sum3 = NaturalNamberVar3(n, 0);
-System.Console.WriteLine(sum3);
-
 int NaturalNamber(int n, int sum)
 {
     sum += n % 10;
