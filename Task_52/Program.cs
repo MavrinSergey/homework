@@ -54,9 +54,9 @@ void PrintArray(double[] array)
 {
     for (int i = 0; i < array.Length; i++)
     {
-        if (i == 0) System.Console.Write("[");
+        if (i == 0) Console.Write("[");
         if (i < array.Length - 1) Console.Write(Math.Round(array[i], 2) + "; ");
-        else System.Console.Write(Math.Round(array[i], 2) + "]");
+        else Console.Write(Math.Round(array[i], 2) + "]");
     }
 }
 

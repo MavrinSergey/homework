@@ -42,7 +42,7 @@ int SearchCellValues(int[,] array, int row, int col)
 }
 
 
-int[,] table = CreateMatrixRndInt(4, 4, 0, 9);
+int[,] table = CreateMatrixRndInt(4, 5, 0, 9);
 PrintMatrix(table);
 Console.WriteLine("Программа находит значние ячейки данной таблицы");
 Console.Write("Введите номер строки нужной вам ячейки: ");

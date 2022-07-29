@@ -87,7 +87,6 @@ int[,] Dictionary(int[] array)
     return result;
 }
 
-
 Console.WriteLine("Программа упорядочивает по убыванию элементы каждой строки двухмерного массива.");
 Console.Write("Введите кол-во строк: ");
 int row = Convert.ToInt32(Console.ReadLine());

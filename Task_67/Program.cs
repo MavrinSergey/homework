@@ -29,23 +29,5 @@ int NaturalNamberVar2(int n)
     if (n > 0) return n % 10 + NaturalNamberVar2(n / 10);
     return 0;
 }
-// апгрейдить!!
-int NaturalNamberVar3(int n, int sum)
-{
-    sum += n % 10;
-    if (n / 10 == 0)
-    {
-        if (s > 9)
-        {
-            a = sum;
-            s += n % 10;
-            if (n / 10 == 0) return a;
-            else return NaturalNamberVar3(n / 10, a);
-        }
-        return a;
-    }
-    else return NaturalNamberVar3(n / 10, sum);
-
-}
 
 
