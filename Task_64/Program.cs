@@ -16,5 +16,5 @@ void NaturalNamber(int m, int n)
     Console.Write($"{m}, ");
     if (m > n) NaturalNamber(m - 1, n);   
     else if (m < n) NaturalNamber(m + 1, n);
-    else;
+    else{}
 }
