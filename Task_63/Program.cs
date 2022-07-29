@@ -5,7 +5,7 @@
 
 Console.Clear();
 Console.Write("Задайте число: ");
-int num = int.Parse(Console.ReadLine());
+int num = Convert.ToInt32(Console.ReadLine());
 NaturalNamber(num);
 
 void NaturalNamber(int num)

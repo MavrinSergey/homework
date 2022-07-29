@@ -5,9 +5,9 @@
 
 Console.Clear();
 Console.Write("Задайте первое число: ");
-int m = int.Parse(Console.ReadLine());
+int m = Convert.ToInt32(Console.ReadLine());
 Console.Write("Задайте второе число: ");
-int n = int.Parse(Console.ReadLine());
+int n = Convert.ToInt32(Console.ReadLine());
 NaturalNamber(m, n);
 
 void NaturalNamber(int m, int n)

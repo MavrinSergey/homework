@@ -5,7 +5,7 @@
 
 Console.Clear();
 Console.Write("Задайте число: ");
-int n = int.Parse(Console.ReadLine());
+int n = Convert.ToInt32(Console.ReadLine());
 
 int sum = NaturalNamber(n, 0);
 System.Console.WriteLine(sum);

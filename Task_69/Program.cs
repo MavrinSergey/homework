@@ -5,9 +5,9 @@
 
 Console.Clear();
 Console.Write("Задайте первое число: ");
-int a = int.Parse(Console.ReadLine());
+int a = Convert.ToInt32(Console.ReadLine());
 Console.Write("Задайте второе число: ");
-int b = int.Parse(Console.ReadLine());
+int b = Convert.ToInt32(Console.ReadLine());
 
 int result = Pow(a, b);
 System.Console.WriteLine(result);
